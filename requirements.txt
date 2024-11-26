@@ -1,0 +1,3 @@
+pandas
+trafilatura
+streamlit
