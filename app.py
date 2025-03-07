@@ -11,7 +11,6 @@ df = pd.DataFrame({
     'second column': np.arange(10, 101, 10)
 })
 
-st.write("Hello World")
 
 line_count = st.slider('Select a line count', 1, 10, 3)
 
