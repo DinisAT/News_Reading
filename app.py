@@ -23,8 +23,6 @@ st.markdown("""
 </script>
 """, unsafe_allow_html=True)
 
-st.write("If you open browser console (F12), you should see a GA4 tag log message here.")
-
 
 def scraping(url: str):
     # Solution for signal / thread error
