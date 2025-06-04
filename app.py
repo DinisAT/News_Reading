@@ -10,16 +10,17 @@ st.title('Web Scraping App Great')
 
 GA4_MEASUREMENT_ID = "G-5N0GKYX6YE"
 
-ga4_js = f"""
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', '{GA4_MEASUREMENT_ID}');
-</script>
-"""
+import streamlit.components.v1 as components
+
+components.html(f"""
+  <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', '{GA4_MEASUREMENT_ID}');
+  </script>
+""", height=0)
 
 def scraping(url: str):
     # Solution for signal / thread error
