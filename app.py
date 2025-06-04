@@ -8,20 +8,22 @@ from trafilatura.settings import use_config
 
 st.title('Web Scraping App Great')
 
-import streamlit.components.v1 as components
-
-components.html("""
+st.markdown("""
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N0GKYX6YE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-5N0GKYX6YE');
-  console.log("GA4 tag script loaded from components.html");
-</script>
-""", height=0)
 
+  gtag('config', 'G-5N0GKYX6YE');
+
+  // Test log to console to check script runs
+  console.log("GA4 tag script loaded");
+</script>
+""", unsafe_allow_html=True)
+
+st.write("If you open browser console (F12), you should see a GA4 tag log message here.")
 
 
 def scraping(url: str):
