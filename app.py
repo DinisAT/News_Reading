@@ -6,18 +6,18 @@ import trafilatura
 from trafilatura import extract
 from trafilatura.settings import use_config
 
-st.title('Web Scraping App')
+st.title('Web Scraping App Great')
 
 import streamlit.components.v1 as components
 
 components.html("""
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N0GKYX6YE"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FNV83T291T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-5N0GKYX6YE');
+  gtag('config', 'G-FNV83T291T');
   console.log("GA4 tag script loaded from components.html");
 </script>
 """, height=0)
