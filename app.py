@@ -6,7 +6,7 @@ import trafilatura
 from trafilatura import extract
 from trafilatura.settings import use_config
 
-st.title('Web Scraping App Great')
+st.title('Web Scraping App')
 
 st.markdown("""
 <!-- Google tag (gtag.js) -->
