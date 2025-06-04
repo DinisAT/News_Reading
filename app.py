@@ -8,6 +8,19 @@ from trafilatura.settings import use_config
 
 st.title('Web Scraping App')
 
+GA4_MEASUREMENT_ID = "G-5N0GKYX6YE"
+
+ga4_js = f"""
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA4_MEASUREMENT_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', '{GA4_MEASUREMENT_ID}');
+</script>
+"""
+
 def scraping(url: str):
     # Solution for signal / thread error
     config = use_config()
